@@ -25,4 +25,4 @@ let miFuncion = function (a){
     return a;
 };
 
-let miFuncionF = a => a;
+let miFuncionF = (a) => a;
