@@ -115,6 +115,10 @@ interface Xmen{
     nombre: string,
     poder: string
 }
+// Podria definirse 
+// function enviar(xmen:{nombreXmen: string}) {
+//     console.log("Enviar :" + xmen.nombreXmen);
+// }
 
 function enviarMision(xmen: Xmen) {
     console.log("Enviando de mision a: " + xmen.nombre);   
@@ -129,5 +133,6 @@ let wolverine: Xmen = {
     poder: "Regeneracion"
 };
 
+// enviar(wolverine); // Error al no coincidir los atributos nombre - nombreXmen
 enviarMision(wolverine);
 enviarCuartel(wolverine);
