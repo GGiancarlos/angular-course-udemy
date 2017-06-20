@@ -107,3 +107,7 @@ promise1.then(function () {
 })
 
 console.log("Paso 2");
+
+/**
+ * Interfaces de Typescript
+ */
