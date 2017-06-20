@@ -3,7 +3,10 @@
 // let edad: number = 25;
 // let texto = `Hola, ${ nombre } ${apellido} ${edad}`;
 
-// //Funciones: Parámetros opcionales, obligarios y por defecto
+/**
+ * Funciones: Parámetros opcionales, obligarios y por defecto
+ */
+
 // function activar (quien: string, 
 //                   objeto: string = "señal",
 //                   opcional?: string)
@@ -19,7 +22,10 @@
 
 // activar("Gordon");
 
-// //Funciones por Flecha
+
+/**
+ * Funciones por Flecha
+ */
 
 // let miFuncion = function (a){
 //     return a;
@@ -53,24 +59,51 @@
 
 // hulk.smash();
 
+/**
+ * Destructuración de Objetos y Arreglos
+ */
 
-//Destructuración de Objetos y Arreglos
-let avenger = {
-    nombre: "Steve",
-    clave: "Capitan America",
-    poder: "Droga"
-}
+// let avenger = {
+//     nombre: "Steve",
+//     clave: "Capitan America",
+//     poder: "Droga"
+// }
 
-// let nombre = avenger.nombre;
-// let clave = avenger.clave;
-// let poder = avenger.poder;
+// // let nombre = avenger.nombre;
+// // let clave = avenger.clave;
+// // let poder = avenger.poder;
 
-let { nombre, clave, poder} = avenger; //destructuracion
+// let { nombre, clave, poder} = avenger; //destructuracion
 
-console.log(nombre, clave, poder);
+// console.log(nombre, clave, poder);
 
-let avengers: string[] = ["Thor", "Steve", "Tony"];
+// let avengers: string[] = ["Thor", "Steve", "Tony"];
 
-let [ thor, capi, ironman] = avengers;
+// let [ thor, capi, ironman] = avengers;
 
-console.log(thor, capi, ironman);
+// console.log(thor, capi, ironman);
+
+/**
+ * Promesas en ES6
+ */
+
+let promise1 = new Promise( function(resolve, reject){
+    setTimeout( () => {
+        console.log("Promesa terminada");
+        // Termina bien
+        //resolve();
+
+        // Termina mal
+        reject();
+    }, 1500);    
+})
+
+console.log("Paso 1");
+
+promise1.then(function () {
+    console.log("Ejecutarme cuando termine bien");
+}, function () {
+    console.error("Ejecutar si algo sale mal");
+})
+
+console.log("Paso 2");
