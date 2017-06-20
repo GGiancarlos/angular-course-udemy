@@ -87,27 +87,47 @@
  * Promesas en ES6
  */
 
-let promise1 = new Promise( function(resolve, reject){
-    setTimeout( () => {
-        console.log("Promesa terminada");
-        // Termina bien
-        //resolve();
+// let promise1 = new Promise( function(resolve, reject){
+//     setTimeout( () => {
+//         console.log("Promesa terminada");
+//         // Termina bien
+//         //resolve();
 
-        // Termina mal
-        reject();
-    }, 1500);    
-})
+//         // Termina mal
+//         reject();
+//     }, 1500);    
+// })
 
-console.log("Paso 1");
+// console.log("Paso 1");
 
-promise1.then(function () {
-    console.log("Ejecutarme cuando termine bien");
-}, function () {
-    console.error("Ejecutar si algo sale mal");
-})
+// promise1.then(function () {
+//     console.log("Ejecutarme cuando termine bien");
+// }, function () {
+//     console.error("Ejecutar si algo sale mal");
+// })
 
-console.log("Paso 2");
+// console.log("Paso 2");
 
 /**
  * Interfaces de Typescript
  */
+interface Xmen{
+    nombre: string,
+    poder: string
+}
+
+function enviarMision(xmen: Xmen) {
+    console.log("Enviando de mision a: " + xmen.nombre);   
+}
+
+function enviarCuartel(xmen: Xmen) {
+    console.log("Enviando al cuartel a: " + xmen.nombre);   
+}
+
+let wolverine: Xmen = {
+    nombre: "Wolverine",
+    poder: "Regeneracion"
+};
+
+enviarMision(wolverine);
+enviarCuartel(wolverine);
