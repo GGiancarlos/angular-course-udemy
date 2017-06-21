@@ -111,28 +111,54 @@
 /**
  * Interfaces de Typescript
  */
-interface Xmen{
-    nombre: string,
-    poder: string
-}
-// Podria definirse 
-// function enviar(xmen:{nombreXmen: string}) {
-//     console.log("Enviar :" + xmen.nombreXmen);
+// interface Xmen{
+//     nombre: string,
+//     poder: string
+// }
+// // Podria definirse 
+// // function enviar(xmen:{nombreXmen: string}) {
+// //     console.log("Enviar :" + xmen.nombreXmen);
+// // }
+
+// function enviarMision(xmen: Xmen) {
+//     console.log("Enviando de mision a: " + xmen.nombre);   
 // }
 
-function enviarMision(xmen: Xmen) {
-    console.log("Enviando de mision a: " + xmen.nombre);   
+// function enviarCuartel(xmen: Xmen) {
+//     console.log("Enviando al cuartel a: " + xmen.nombre);   
+// }
+
+// let wolverine: Xmen = {
+//     nombre: "Wolverine",
+//     poder: "Regeneracion"
+// };
+
+// // enviar(wolverine); // Error al no coincidir los atributos nombre - nombreXmen
+// enviarMision(wolverine);
+// enviarCuartel(wolverine);
+
+
+/**
+ * Clases en Typescript
+ */
+
+class Avenger {
+    nombre: string = "Sin Nombre";
+    equipo: string;
+    nombreReal: string;
+
+    puedePelear: boolean = false;
+    peleasGanadas: number = 0;
+
+    constructor(nombre: string, equipo: string, nombreReal: string){
+        console.log("Se ejecuto el constructor");
+        this.nombre = nombre;
+        this.equipo = equipo;
+        this.nombreReal = nombreReal;
+    }
 }
 
-function enviarCuartel(xmen: Xmen) {
-    console.log("Enviando al cuartel a: " + xmen.nombre);   
-}
+let antman: Avenger = new Avenger("Antman", "cap", "Scott Lang");
 
-let wolverine: Xmen = {
-    nombre: "Wolverine",
-    poder: "Regeneracion"
-};
+console.log(antman);
 
-// enviar(wolverine); // Error al no coincidir los atributos nombre - nombreXmen
-enviarMision(wolverine);
-enviarCuartel(wolverine);
