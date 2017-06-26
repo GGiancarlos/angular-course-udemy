@@ -3,6 +3,11 @@ body {
   padding-bottom: 50px;
 }
 
+.img-logo {
+  width: 200px;
+  height: 200px;
+}
+
 .main-container {
     margin-top: 20px;
 }
